@@ -1,0 +1,28 @@
+{
+  "name": "termproject-team-j",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./backend/server.js",
+    "start:dev": "nodemon ./backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fahimamiri/TermProject-Team-J.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fahimamiri/TermProject-Team-J/issues"
+  },
+  "homepage": "https://github.com/fahimamiri/TermProject-Team-J#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "description": ""
+}
