@@ -7,8 +7,16 @@
     "build": "webpack",
     "build:dev": "webpack --watch",
     "server:dev": "nodemon ./backend/server.js",
-    "start:dev": "concurrently \"npm:server:dev\" \"npm:build:dev\""
+    "start:dev": "concurrently \"npm:server:dev\" \"npm:build:dev\"",
+    "prepare": "husky install"
   },
+
+
+    "lint-staged": {
+      "**/*": "prettier --write --ignore-unknown"
+      
+    },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fahimamiri/TermProject-Team-J.git"
@@ -31,6 +39,8 @@
     "babel-loader": "^9.1.3",
     "concurrently": "^8.2.2",
     "connect-livereload": "^0.6.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "livereload": "^0.9.3",
     "nodemon": "^3.0.1",
     "webpack": "^5.89.0",
