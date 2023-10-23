@@ -1,18 +1,30 @@
+
 const path = require("path");
 const express = require("express");
 const createError = require("http-errors");
 const requestTimeMiddleware = require("./middleware/request-time");
 
 const rootRoutes = require("./routes/root");
+const { execPath } = require("process");
 const app = express();
 //Port env set up 
 const PORT = process.env.PORT || 3000;
 
-//for static file that ar in the bakcedn 
+
+app.set("views", path.join(__dirname,  "views"));
+app.set("view engine", "ejs");
+
+
+//for static for file source  that ar in the bakcend 
+//__dirname is direcorty name
 app.use(express.static(path.join(__dirname,"static")));
 
+
+
+//middleware called here
 app.use(requestTimeMiddleware);
 app.use("/", rootRoutes);
+//http error  localHost:3000/eljlekj 
 app.use((_request, _response, next)=>{
     next(createError(404));
 });
